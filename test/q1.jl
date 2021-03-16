@@ -2,7 +2,7 @@ using Test
 using Statistics
 
 @testset "Q1" begin
-p = [zeros(n,n) for k = 1:T]
+P = [zeros(n,n) for k = 1:T]
 p = [zeros(n) for k = 1:T]
 K = [zeros(m,n) for k = 1:T-1]
 d = [zeros(m) for k = 1:T-1]
