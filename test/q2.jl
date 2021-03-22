@@ -50,7 +50,7 @@ end
 # test qp solve
 dZ_, dλ_ = solve_qp!(qp)
 @test qp.A*dZ_ ≈ qp.b atol=1e-8
-@test qp.Q*dZ_ + qp.q + qp.A'dλ_ ≈ zero(Zrand) atol=1e-8
+@test qp.Q*dZ_ + qp.q - qp.A'dλ_ ≈ zero(Zrand) atol=1e-8
 end
 
 
